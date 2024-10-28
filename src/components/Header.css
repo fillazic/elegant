@@ -2,10 +2,13 @@
 
 .header {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     height: 4.5rem;
-    background-color: #001f3f;
-    box-shadow: 12px 12px 15px 15px #8b9092;
+    background-color: #002244;
+    z-index: 2;
+    width: 100%;
+    margin: auto;
 }
 
 .logo {
@@ -22,7 +25,7 @@
 .logo h2 {
     padding: 0.7rem;
     background-color: none;
-    color: white;
+    color: #c5b358;
     font-size: 1.7rem;
     font-family: "Lora", serif;
     font-weight: 400;

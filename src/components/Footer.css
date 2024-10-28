@@ -1,0 +1,23 @@
+
+.elegant-draskovic-kontakt {
+    background-color: #002244;
+    color: white;
+    height: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.kontakt-draskovic {
+    padding: 1rem;
+    padding-top: 0.2rem;
+}
+
+.kontakt-draskovic a {
+    text-decoration: none;
+    color: white;
+}
+
+.instagram-elegant img {
+    height: 2rem;
+    width: auto;
+}
