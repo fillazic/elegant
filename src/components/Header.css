@@ -156,11 +156,18 @@
     cursor: pointer;
 }
 .close-path-h img {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     height: 2rem;
     width: auto;
 }
 
+.search-btn-img {
+    background-color: #c5b358;
+    margin: 0;
+    height: 2.2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
 
 
 @media only screen and (min-width: 820px){

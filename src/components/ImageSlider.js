@@ -15,8 +15,10 @@ const settings ={
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3500,
     arrows: false,
+    fade: true,
+    waitForAnimate: false
     }
 
 return (
@@ -42,17 +44,17 @@ return (
             </button>
         </div>
        <div className='zgrada-elegant'>
+            <ul>
+                <li>BAZEN NA OTVORENOM</li>
+                <li>PANORAMSKI KAFE-RESTORAN</li>
+                <li>LOBI BAR</li>
+                <li>RECEPCIJA</li>
+                <li>TERETANA</li>
+            </ul>
             <p>
                 Stambeno - poslovna zgrada Elegant-Drašković nastala je idejom tvorca ovog savremenog objekta da posetiocima i gostima ponudi veliki broj sadržaja
-                , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi:
+                , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi.
             </p>
-            <ul>
-                <li>- BAZEN NA OTVORENOM</li>
-                <li>- PANORAMSKI KAFE-RESTORAN NA 7. ETAŽI</li>
-                <li>- LOBI BAR</li>
-                <li>- RECEPCIJA</li>
-                <li>- TERETANA</li>
-            </ul>
             <div className='bazen'>
                 <img src='images/bazen.jpg'/>
             </div>
@@ -63,14 +65,33 @@ return (
                 Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
                 po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
             </p>
-            <ul>
-                <li>- VIDEO NADZOR</li>
-                <li>- ALU STOLARIJA</li>
-                <li>- KARTIČNI SISTEM</li>
-                <li>- PAMETNA ZGRADA</li>
-                <li>- LIFT</li>
-                <li>- PERIONICA</li>
+            <ul className='dodatak'>
+                <li>VIDEO NADZOR</li>
+                <li>ALU STOLARIJA</li>
+                <li>KARTIČNI SISTEM</li>
+                <li>PAMETNA ZGRADA</li>
+                <li>LIFT</li>
+                <li>PERIONICA</li>
             </ul>
+            <h3 className='lokacija'>Lokacija</h3>
+            <div className='map'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9969772911054!2d20.889426575108825!3d43.62742185409933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475657f62cb008fb%3A0x49048b68e6055967!2sElegant%20Draskovic!5e0!3m2!1ssr!2srs!4v1730224240414!5m2!1ssr!2srs"            
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">      
+            </iframe>
+            </div>
+            <h3 className='galerija-slika'>Galerija</h3>
+            <div className='galerija'>
+            {images.map((img, index) => (
+                <div key={index}>
+                        <img
+                            src={img}
+                            alt={'draskovic'}                       
+                        />
+                </div>
+                ))}
+            </div>
        </div>
     </div>
 )

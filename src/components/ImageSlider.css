@@ -21,7 +21,7 @@
 .prodaja-stanova {
     position: absolute;
     font-weight: bold;
-    top: 20%;
+    top: 21rem;
     width: 90%;
     text-align: center;
     margin: auto 1rem;
@@ -31,7 +31,7 @@
     text-align: left;
     justify-content: center;
     font-size: 1.2rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.2rem;
     background-color: hsl(210, 100%, 13%, 0.8);
     color: #ffff;
     opacity: 0.8;
@@ -43,9 +43,9 @@
     background-color: #c5b358;
     color: white;
     border: none;
-    height: 2rem;
-    width: 6rem;
-    font-size: 1rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
@@ -55,24 +55,35 @@
 .zgrada-elegant {
     background-color: white;
     margin: auto 0;
+    padding-top: 0.5rem;
 }
 
 .zgrada-elegant p {
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: auto 1rem;
     opacity: 0.8;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .zgrada-elegant ul {
     text-align: left;
-    margin: auto 1rem;
-    padding-left: 0;
-    list-style-type: none;
-    font-size: 0.8rem;
+    margin: 0 1rem;
+    margin-left: 0;
+    font-size: 1rem;
     font-weight: bold;
-    line-height: 2rem; 
     opacity: 0.9;
+}
+
+.dodatak {
+    padding-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 2rem;
 }
 
 .bazen {
@@ -84,3 +95,45 @@
     width: 100%;
     height: auto;
 }
+
+.map {
+    position: relative;
+    width: 80%; 
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%; 
+    height: 100%; 
+  }
+  .galerija-slika, .lokacija {
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+  .galerija {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    margin: 1rem 0.5rem;
+  }
+
+  .galerija div {
+    max-width: 35rem;
+    max-height: 35rem;
+  }
+
+  .galerija div img {
+    margin: auto;
+    height: 100%;
+    max-width: 100%;
+  }

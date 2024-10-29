@@ -58,9 +58,9 @@ function Header( ) {
         </div>
 
         <div className='menu'>
-          <img  className='sedan-btn' src="images/mail-icon.svg" alt="car" onClick={changeVisibility} />
-          <img  className='search-btn-img' src="images/phone.svg" alt="search" />
-          <img  className='menu-btn' src="images/hamburger.svg" alt="menu" onClick={menuVis} />
+          <a href="mailto:elegant.mts@gmail.com"><img  className='sedan-btn' src="images/mail-icon.svg" alt="car" onClick={changeVisibility} /></a>
+          <a href='tel:+38163633518' ><img  className='search-btn-img' src="images/phone.svg" alt="search" /></a>
+          <a><img  className='menu-btn' src="images/hamburger.svg" alt="menu" onClick={menuVis} /></a>
         </div>
         
         <div className='menu-visible' >
