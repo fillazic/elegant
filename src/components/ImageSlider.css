@@ -3,6 +3,7 @@
 .apartmani {
     position: relative;
     width: auto;
+    height: auto;
     background-color: white;
     text-align: center;
     padding-top: 4.5rem;
@@ -53,7 +54,6 @@
 }
 
 .zgrada-elegant {
-    background-color: white;
     margin: auto 0;
     padding-top: 0.5rem;
 }
@@ -71,7 +71,7 @@
     text-align: left;
     margin: 0 1rem;
     margin-left: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     opacity: 0.9;
 }
@@ -83,7 +83,7 @@
 ul li {
     margin-bottom: 0;
     padding-bottom: 0;
-    line-height: 2rem;
+    line-height: 1.6rem;
 }
 
 .bazen {
@@ -114,12 +114,14 @@ ul li {
     height: 100%; 
   }
   .galerija-slika, .lokacija {
-    font-weight: lighter;
     text-align: left;
     margin-left: 0.5rem;
+    font-weight: 500;
+    opacity: 0.8;
 }
 
   .galerija {
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     row-gap: 0.5rem;
@@ -135,5 +137,5 @@ ul li {
   .galerija div img {
     margin: auto;
     height: 100%;
-    max-width: 100%;
+    width: 100%;
   }

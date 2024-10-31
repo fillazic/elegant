@@ -39,9 +39,11 @@ return (
                 <br/>
                 - Izdavanje apartmana
             </p>
+            <a href='stanovi'>
             <button className='stanovi'>
                 STANOVI
             </button>
+            </a>
         </div>
        <div className='zgrada-elegant'>
             <ul>

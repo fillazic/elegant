@@ -1,0 +1,142 @@
+
+div.selected-container {
+    width: 20rem;
+    height: 2.6rem;
+    position: relative;
+    text-align: center;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #002142;
+    border-radius: 0.5rem;
+    
+}
+
+div.selected-container:hover {
+    border: 1.4px solid hsl(210, 100%, 13%, 0.8);
+    .icon i {
+        color: hsl(210, 100%, 13%, 0.8);
+    }
+
+}
+
+#selected-items {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    font-size: 1rem;
+    color: #002142;
+    border: none;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.icon {
+    height: 100%;
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.icon i {
+    font-size: 1.5rem;
+    color: #002142;
+}
+
+.namesteni-apartmani {
+    border: 4px solid #c5b358;
+    background-color: #002142;
+    padding: 10px;
+}
+
+.kraljevski-apartman {
+    margin: auto;
+    background-color: #002142;
+    border: 3px solid #c5b358;
+   /* background-image: linear-gradient(to right, #c5b358 10%, #002142 60%, #c5b358 10%);*/
+}
+
+.kraljevski-apartman h3 {
+    color: #c5b358;
+    margin: 0;
+    border-bottom: 3px solid #c5b358;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.kraljevski-apartman div { 
+    max-width: 35rem;
+    max-height: 35rem;
+}
+
+.kraljevski-apartman img {
+    width: 100%;
+    height: 100%;
+}
+
+.opis {
+    text-align: center;
+}
+.opis div {
+   text-align: center;
+   color: #c5b358;
+   font-size: 1rem;
+}
+
+.opis p {
+    text-align: center;
+}
+
+.pregled {
+    background-color: #c5b358;
+    color: white;
+    width: 5rem;
+    padding:  0.5rem 1rem;
+    font-weight: 500;
+    margin: auto;
+}
+
+
+.elegant-apartmani-u-izgradnji {
+    color: black;
+    opacity: 0.8;
+    text-align: center;
+    padding-left: 1rem;
+}
+.apartmani-u-izgradnji {
+    border: 4px solid hsla(0, 0%, 0%, 0.8);
+    background-color: hsla(214, 24%, 87%, 0.8);
+    padding: 10px;
+    margin: 0.5rem;
+}
+
+.sema div { 
+    max-width: 35rem;
+    max-height: 35rem;
+}
+
+.sema img {
+    width: 100%;
+    height: 100%;
+}
+
+.apartmani-u-izgradnji div p {
+    color: black;
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.pregled-izgradnje {
+    background-color: #c5b358;
+    color: white;
+    width: 5rem;
+    padding:  0.5rem 1rem;
+    font-weight: 500;
+    margin: auto;
+}
