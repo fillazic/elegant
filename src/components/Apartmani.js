@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import izgradnja from './Stanovi';
 import './Apartmani.css';
 
-function Apartmani( ) {
+function Apartmani () {
 
 const [povrsina, setPovrsina] = useState(null); // Set initial value to null or any default value
 const [sprat, setSprat] = useState(null);
@@ -38,6 +38,7 @@ const settings ={
 
 return (
     <div className='elegant-apartmani'>
+         <div className='okvir-slike'>
            <Slider {...settings} className='slike'>               
                 {images.map((img, index) => (
                         <img
@@ -48,6 +49,7 @@ return (
                         />
                 ))}
             </Slider>
+            </div>
             <div className='prodaja-stanova'>
             <p>
                 - Direktna prodaja stanova
@@ -55,18 +57,18 @@ return (
                 - Izdavanje apartmana
             </p>         
         </div>
-         <h3 className='elegant-apartmani-u-izgradnji'>Namesteni apartmani</h3>
-
+         <h3 className='vrnjacka-banja-apartmani'>Namesteni apartmani</h3>
         <div className='namesteni-apartmani'>
             <div className='kraljevski-apartman'>
-                <h3>Kraljevski Apartman - 406</h3>
                 <div>
-                    <img src='images/stan1.jpg'/>
+                    <img src='images/stan7.jpg'/>
                 </div>
             </div>
+            <h3>Kraljevski Apartman - 406</h3>
             <div className='opis'>
                 <div>
-                    <p>  Kvadratura: 78m2</p>
+                    <p>Kvadratura: 78m2</p>
+                    <p>Sprat: 2</p>
                 </div>
                 <p className='pregled'>Detaljnije</p>
             </div>

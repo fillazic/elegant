@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './ImageSlider.css';
 
 
 function ImageSlider() { 
+
+const [activeSlide, setActiveSlide] = useState(0);
+
+const handleSlideChange = (next) => {
+        setActiveSlide(next); // Set the new active slide
+    };
 
 const images= ["images/kuca.jpg" , "images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
 
@@ -15,35 +22,39 @@ const settings ={
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 3400,
     arrows: false,
     fade: true,
-    waitForAnimate: false
+    waitForAnimate: false,
+    cssEase: "ease",
+    beforeChange: (current, next) => handleSlideChange(next)
     }
 
 return (
     <div className='apartmani'>
-        <Slider {...settings} className='slike'>               
-                {images.map((img, index) => (
-                        <img
-                            src={img}
-                            alt={'draskovic'}
-                            key={index}
-                            className="image-slider"
-                        />
-                ))}
+        <div className='okvir-slike'>
+            <Slider {...settings} className='slike'>               
+                    {images.map((img, index) => (
+                            <img
+                                src={img}
+                                alt={'draskovic'}
+                                key={index}
+                               className={`image-slider ${index === activeSlide ? "zoom-out" : ""}`}
+                            />
+                    ))}
             </Slider>
+        </div>
         <div className='prodaja-stanova'>
             <p>
                 - Direktna prodaja stanova
                 <br/>
                 - Izdavanje apartmana
             </p>
-            <a href='stanovi'>
+            <Link to='stanovi'>
             <button className='stanovi'>
                 STANOVI
             </button>
-            </a>
+            </Link>
         </div>
        <div className='zgrada-elegant'>
             <ul>

@@ -7,16 +7,38 @@
     background-color: white;
     text-align: center;
     padding-top: 4.5rem;
+    margin: auto;
+}
+
+.okvir-slike {
+    position: flex;
+    overflow: hidden;
 }
 
 .slike {
-    max-width: 40rem;
-    max-height: 100%;
+    width: 40rem;
+    height: auto;
 }
 
 .image-slider {
-    height: 30rem;
-    max-width: 30rem;
+    height: 40rem;
+    width: 30rem;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1); /* Adjust as needed */
+
+    }
+}
+
+.zoom-out {
+    animation: zoomOut 3500ms ease forwards;
+    animation-iteration-count: infinite;
 }
 
 .prodaja-stanova {
