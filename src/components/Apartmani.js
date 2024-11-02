@@ -8,9 +8,9 @@ import './Apartmani.css';
 function Apartmani () {
 
 const [povrsina, setPovrsina] = useState(null); // Set initial value to null or any default value
-const [sprat, setSprat] = useState(null);
 
-const images= ["images/kuca.jpg" , "images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
+
+const images= ["images/stan1.jpg", "images/stan7.jpg", "images/bazen.jpg"];
 
  const filteredIzgradnja = izgradnja.filter(stan => {
         if (povrsina === 30) {
@@ -36,9 +36,10 @@ const settings ={
     waitForAnimate: false
     }
 
+
 return (
     <div className='elegant-apartmani'>
-         <div className='okvir-slike'>
+         <div className='apartmani-vrnjacka-banja'>
            <Slider {...settings} className='slike'>               
                 {images.map((img, index) => (
                         <img
@@ -50,14 +51,14 @@ return (
                 ))}
             </Slider>
             </div>
-            <div className='prodaja-stanova'>
+            <div className='prodaja-apartmana'>
             <p>
-                - Direktna prodaja stanova
+                Namešteni stanovi
                 <br/>
-                - Izdavanje apartmana
+                Stanovi u izgradnji
             </p>         
         </div>
-         <h3 className='vrnjacka-banja-apartmani'>Namesteni apartmani</h3>
+         <h3 className='vrnjacka-banja-apartmani'>Namešteni apartmani</h3>
         <div className='namesteni-apartmani'>
             <div className='kraljevski-apartman'>
                 <div>

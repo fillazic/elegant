@@ -1,4 +1,34 @@
 
+.elegant-apartmani {
+    padding-top: 4.5rem;
+}
+
+.elegant-apartmani h3 {
+    text-align: center;
+}
+
+.apartmani-vrnjacka-banja {
+    height: auto;
+}
+
+.prodaja-apartmana {
+    position: absolute;
+    font-weight: bold;
+    top: 30rem;
+    width: 90%;
+    text-align: center;
+    margin: auto 1rem;
+}
+
+.prodaja-apartmana p {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding: 1.2rem 1rem;
+    background-color: hsl(210, 100%, 13%, 0.8);
+    color: #ffff;
+}
+
 div.selected-container {
     width: 20rem;
     height: 2.6rem;

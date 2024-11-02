@@ -14,7 +14,7 @@ const handleSlideChange = (next) => {
         setActiveSlide(next); // Set the new active slide
     };
 
-const images= ["images/kuca.jpg" , "images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
+const images= ["images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
 
 const settings ={
     infinite: true,
@@ -73,7 +73,7 @@ return (
             </div>
        </div>
 
-       <div className='zgrada-elegant'>
+       <div className='zgrada-elegant' id="elegant-zgrada">
             <p>
                 Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
                 po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
