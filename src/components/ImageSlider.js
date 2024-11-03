@@ -3,18 +3,28 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ImageFull from './ImageFull';
 import './ImageSlider.css';
 
 
 function ImageSlider() { 
 
+const images= ["images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
 const [activeSlide, setActiveSlide] = useState(0);
+const [isOpen, setIsOpen] = useState(false);
+const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 const handleSlideChange = (next) => {
-        setActiveSlide(next); // Set the new active slide
+        setActiveSlide(next); 
     };
 
-const images= ["images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
+const openModal = (index) => {
+        setCurrentImageIndex(index);
+        setIsOpen(true);
+      };
+      
+const closeModal = () => setIsOpen(false);
+
 
 const settings ={
     infinite: true,
@@ -30,7 +40,9 @@ const settings ={
     beforeChange: (current, next) => handleSlideChange(next)
     }
 
+
 return (
+    
     <div className='apartmani'>
         <div className='okvir-slike'>
             <Slider {...settings} className='slike'>               
@@ -69,7 +81,7 @@ return (
                 , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi.
             </p>
             <div className='bazen'>
-                <img src='images/bazen.jpg'/>
+                <img src='images/bazen.jpg' />
             </div>
        </div>
 
@@ -100,11 +112,18 @@ return (
                 <div key={index}>
                         <img
                             src={img}
-                            alt={'draskovic'}                       
+                            alt='draskovic'
+                            onClick={() => openModal(index)}                       
                         />
                 </div>
                 ))}
             </div>
+            <ImageFull isOpen={isOpen}
+                    onClose={closeModal}
+                    imgs={images}
+                    currentImageIndex={currentImageIndex}
+                    setCurrentImageIndex={setCurrentImageIndex} 
+                />
        </div>
     </div>
 )

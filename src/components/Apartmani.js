@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import stanovi from './NamesteniStanovi';
 import izgradnja from './Stanovi';
 import './Apartmani.css';
 
 function Apartmani () {
 
-const [povrsina, setPovrsina] = useState(null); // Set initial value to null or any default value
+const [povrsina, setPovrsina] = useState(null);
 
-
-const images= ["images/stan1.jpg", "images/stan7.jpg", "images/bazen.jpg"];
+const images= ["images/stan8.jpg", "images/stan9.jpg", "images/stan10.jpg","images/stan11.jpg", "images/bazen.jpg"];
+const [detalj, setDetalj] = useState(null)
 
  const filteredIzgradnja = izgradnja.filter(stan => {
         if (povrsina === 30) {
@@ -36,6 +38,9 @@ const settings ={
     waitForAnimate: false
     }
 
+useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
 return (
     <div className='elegant-apartmani'>
@@ -59,23 +64,26 @@ return (
             </p>         
         </div>
          <h3 className='vrnjacka-banja-apartmani'>Namešteni apartmani</h3>
-        <div className='namesteni-apartmani'>
-            <div className='kraljevski-apartman'>
-                <div>
-                    <img src='images/stan7.jpg'/>
-                </div>
-            </div>
-            <h3>Kraljevski Apartman - 406</h3>
-            <div className='opis'>
-                <div>
-                    <p>Kvadratura: 78m2</p>
-                    <p>Sprat: 2</p>
-                </div>
-                <p className='pregled'>Detaljnije</p>
-            </div>
-        </div>
 
-        <h3 className='elegant-apartmani-u-izgradnji'>Apartmani u izgradnji</h3>
+         {stanovi.map((stan, index) => (
+            <div className='namesteni-apartmani'>
+                <div className='kraljevski-apartman'>
+                    <div>
+                        <img src={stan.slike[0]}/>
+                    </div>
+                </div>
+                <h3>{stan.naslov}</h3>
+                <div className='opis'>
+                    <div>
+                        <p>Kvadratura: {stan.povrsina}m2</p>
+                        <p>Sprat: {stan.sprat}</p>
+                    </div>
+                    <Link to={`/${index}`} className='link' ><p className='pregled'>Detaljnije</p></Link>
+                </div>
+            </div>
+         ))}
+
+        <h3 className='elegant-apartmani-u-izgradnji'>Stanovi u izgradnji</h3>
         <div>
                 <div className='selected-container'>                    
                         <select name="type" type='text' id="selected-items"  >
@@ -112,10 +120,17 @@ return (
                             <p>Kvadratura: {stan.povrsina}m2</p>
                             <p>Sprat: {stan.sprat}</p>
                         </div>
-                        <p className='pregled-izgradnje'>Detaljnije</p>
+                        <p className='pregled-izgradnje' onClick={() => setDetalj(stan.slike)}>Detaljnije</p>
                 </div>
-
                 ))}
+            <div className={ detalj !== null ? 'full-img' : 'non-full'}  onClick={() => setDetalj(null)} >
+                <div className='detaljnije' onClick={(e) => e.stopPropagation()}>
+                    <div className='detalj-pozadina'>
+                        <span className="close-button-stan"  onClick={() => setDetalj(null)} >&times;</span>
+                        <img src={detalj} className="full-image-stan" alt='stanovi-vrnjacka-banja'/>
+                    </div>
+                </div>
+            </div>
     </div>
     )
 }

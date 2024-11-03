@@ -1,0 +1,21 @@
+
+.detalji-apartmana {
+    padding-top: 5rem;
+}
+
+.pocetak {
+    margin: 1rem;
+    text-align: left; 
+    color: black;
+    opacity: 0.8;
+}
+
+.detalji-apartmana  p {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.slika-apart {
+        width: 100%;
+        height: auto;
+}

@@ -1,13 +1,5 @@
 
 
-const stanovi = [
-    {   
-     naslov: "Kraljevski apartman -406",
-     slike: ["images/stan1.jpg", "images/stan2.jpg"],
-     opis: "Stan br. 406, Kraljevski apartman",
-    }
-]
-
 const izgradnja = [
     {   
      povrsina: 25,
