@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
 
 .elegant-apartmani {
     padding-top: 4.5rem;
+    font-family: "Open Sans", sans-serif;
 }
 
 .elegant-apartmani h3 {
@@ -10,6 +12,7 @@
 .apartmani-vrnjacka-banja {
     position: flex;
     overflow: hidden;
+    animation:  introLoad 4s forwards;
 }
 
 .prodaja-apartmana {
@@ -28,6 +31,8 @@
     padding: 1.2rem 1rem;
     background-color: hsl(210, 100%, 13%, 0.8);
     color: #ffff;
+    opacity: 0;
+    animation: moveDown 2s ease-in-out forwards;
 }
 
 div.selected-container {
@@ -35,6 +40,7 @@ div.selected-container {
     height: 2.6rem;
     position: relative;
     text-align: center;
+    font-family: "Open Sans", sans-serif;
     margin: 1rem auto;
     display: flex;
     align-items: center;
@@ -58,6 +64,7 @@ div.selected-container:hover {
     box-sizing: border-box;
     appearance: none;
     font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
     color: #002142;
     border: none;
     border-radius: 0.5rem;
@@ -242,4 +249,26 @@ div.selected-container:hover {
 
   .link {
     text-decoration: none;
+  }
+
+  @keyframes introLoad {
+
+    from {
+        clip-path: polygon( 0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @keyframes moveDown {
+
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
   }

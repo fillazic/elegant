@@ -11,8 +11,9 @@ function Apartmani () {
 
 const [povrsina, setPovrsina] = useState(null);
 
-const images= ["images/stan8.jpg", "images/stan9.jpg", "images/stan10.jpg","images/stan11.jpg", "images/bazen.jpg"];
-const [detalj, setDetalj] = useState(null)
+const images= ["images/kuca.jpg", "images/stan9.jpg", "images/stan10.jpg","images/stan11.jpg", "images/bazen.jpg"];
+const [detalj, setDetalj] = useState(null);
+const [activeSlide, setActiveSlide] = useState(0);
 
  const filteredIzgradnja = izgradnja.filter(stan => {
         if (povrsina === 30) {
@@ -26,6 +27,10 @@ const [detalj, setDetalj] = useState(null)
         }
     });
 
+const handleSlideChange = (next) => {
+        setActiveSlide(next); 
+    };
+
 const settings ={
     infinite: true,
     speed: 500,
@@ -35,7 +40,8 @@ const settings ={
     autoplaySpeed: 3500,
     arrows: false,
     fade: true,
-    waitForAnimate: false
+    waitForAnimate: false,
+    beforeChange: (current, next) => handleSlideChange(next)
     }
 
 useEffect(() => {
@@ -51,7 +57,7 @@ return (
                             src={img}
                             alt={'draskovic'}
                             key={index}
-                            className="image-slider"
+                            className={`image-slider ${index === activeSlide ? "zoom-out" : ""}`}
                         />
                 ))}
             </Slider>

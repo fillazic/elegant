@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
 
 .apartmani {
     position: relative;
@@ -13,6 +14,7 @@
 .okvir-slike {
     position: flex;
     overflow: hidden;
+    animation:  introLoad 3s forwards;
 }
 
 .slike {
@@ -31,7 +33,7 @@
         opacity: 1;
     }
     100% {
-        transform: scale(1); /* Adjust as needed */
+        transform: scale(1); 
 
     }
 }
@@ -43,19 +45,22 @@
 .prodaja-stanova {
     position: absolute;
     font-weight: bold;
-    top: 30rem;
-    width: 90%;
+    top: 30.6rem;
+    width: 100%;
     text-align: center;
-    margin: auto 1rem;
+    margin: auto;
+    animation:  introLoad 4s forwards;
 }
 
 .prodaja-stanova p {
-    text-align: left;
+    text-align: center;
     justify-content: center;
     font-size: 1.4rem;
+    line-height: 3rem;
     padding: 1rem 0.2rem;
     background-color: hsl(210, 100%, 13%, 0.8);
     color: #ffff;
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -68,14 +73,19 @@
     width: 8rem;
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
     text-align: center;
+    letter-spacing: 1px;
     padding: 0.5rem;
+    animation: puls 2s linear infinite;
+    outline: none;
 }
 
 .zgrada-elegant {
     margin: auto 0;
     padding-top: 2rem;
+    font-family: "Open Sans", sans-serif;
 }
 
 .zgrada-elegant p {
@@ -87,13 +97,15 @@
     padding-bottom: 1rem;
 }
 
-.zgrada-elegant ul {
+.lista {
     text-align: left;
     margin: 0 1rem;
-    margin-left: 0;
+    margin-left: 3rem;
     font-size: 0.9rem;
     font-weight: bold;
-    opacity: 0.9;
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #elegant-zgrada {
@@ -176,4 +188,28 @@ ul li {
     margin: auto;
     height: 100%;
     width: 100%;
+  }
+
+  .animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @keyframes introLoad {
+
+    from {
+        clip-path: polygon( 0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @keyframes puls {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+    }
+    75% {
+      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
   }

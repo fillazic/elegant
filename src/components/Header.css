@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital@0;1&family=Montserrat&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
+
 
 .header {
     display: flex;
@@ -41,6 +44,7 @@
     font-weight: bold;
     font-size: 1rem;
     font-weight: 400;
+    font-family: "Lora", serif;
 }
 
 .desctop-btn {
@@ -78,7 +82,7 @@
     z-index: 3;
     height: 100vh;
     width: 60%;
-    background-color: #656668;
+    background-color: #1b1c1f;
     transform: translateX(100%);
     transition: transform .3s ease-in-out;
 }
@@ -129,10 +133,11 @@
     text-align: left;
     height: 3rem;
     width: 90%;
-    background-color: #656668;
+    background-color: #1b1c1f;
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
     margin-top: 1rem ;
     border: none;
     border-bottom: 1px solid #353030;
@@ -141,7 +146,7 @@
 
 .logIn a {
     text-decoration: none;
-    color: white;
+    color: hsla(0, 13%, 83%, 0.8);
 }
 
 .close-path-h {

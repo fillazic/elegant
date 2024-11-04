@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
@@ -25,7 +25,39 @@ const openModal = (index) => {
       
 const closeModal = () => setIsOpen(false);
 
+function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
 
+  useEffect(() => {
+    // Scroll event handler that applies animation to each element with "animated-element" class
+    const handleScroll = debounce(() => {
+      const elements = document.querySelectorAll('.lista');
+
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        // Check if the element is in the viewport
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight+100) {
+          element.classList.add('animate');
+        } else {
+          element.classList.remove('animate');
+        }
+      });
+    }, 100); // Adjust delay as needed
+
+    // Add the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
 const settings ={
     infinite: true,
     speed: 500,
@@ -58,9 +90,9 @@ return (
         </div>
         <div className='prodaja-stanova'>
             <p>
-                - Direktna prodaja stanova
+                Direktna prodaja stanova
                 <br/>
-                - Izdavanje apartmana
+                Izdavanje apartmana
             </p>
             <Link to='stanovi'>
             <button className='stanovi'>
@@ -69,7 +101,7 @@ return (
             </Link>
         </div>
        <div className='zgrada-elegant'>
-            <ul>
+            <ul className='lista'>
                 <li>BAZEN NA OTVORENOM</li>
                 <li>PANORAMSKI KAFE-RESTORAN</li>
                 <li>LOBI BAR</li>
@@ -90,7 +122,7 @@ return (
                 Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
                 po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
             </p>
-            <ul className='dodatak'>
+            <ul className='dodatak lista'>
                 <li>VIDEO NADZOR</li>
                 <li>ALU STOLARIJA</li>
                 <li>KARTIČNI SISTEM</li>

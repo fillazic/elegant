@@ -10,7 +10,7 @@ return (
             <h3>Kontakt</h3>
             <p>Miroslav Drašković</p>
             <a href="mailto:elegant.mts@gmail.com">elegant.mts@gmail.com</a>          
-            <a href='tel:+381663518'>+381 69 663 518</a>
+            <a href='tel:+38169663518'>+381 69 663 518</a>
         </div>
         <div className='instagram-elegant'>
             <h3>Pratite nas</h3>
