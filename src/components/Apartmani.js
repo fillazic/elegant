@@ -51,13 +51,13 @@ useEffect(() => {
 return (
     <div className='elegant-apartmani'>
          <div className='apartmani-vrnjacka-banja'>
-           <Slider {...settings} className='slike'>               
+           <Slider {...settings} className='slike-apartmani'>               
                 {images.map((img, index) => (
                         <img
                             src={img}
                             alt={'draskovic'}
                             key={index}
-                            className={`image-slider ${index === activeSlide ? "zoom-out" : ""}`}
+                            className={`image-slider-apartmani ${index === activeSlide ? "zoom-out-apartmani" : ""}`}
                         />
                 ))}
             </Slider>

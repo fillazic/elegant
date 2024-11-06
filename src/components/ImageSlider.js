@@ -9,7 +9,7 @@ import './ImageSlider.css';
 
 function ImageSlider() { 
 
-const images= ["images/stan3.jpg", "images/stan4.jpg", "images/stan5.jpg"];
+const images= ["images/kuca.jpg","images2/apartman0.jpg", "images2/apartman1.jpg", "images2/apartman2.jpg","images2/apartman3.jpg","images2/apartman4.jpg"];
 const [activeSlide, setActiveSlide] = useState(0);
 const [isOpen, setIsOpen] = useState(false);
 const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -43,9 +43,7 @@ function debounce(func, delay) {
         // Check if the element is in the viewport
         if (rect.top >= 0 && rect.bottom <= window.innerHeight+100) {
           element.classList.add('animate');
-        } else {
-          element.classList.remove('animate');
-        }
+        } 
       });
     }, 100); // Adjust delay as needed
 

@@ -134,7 +134,7 @@
     height: 3rem;
     width: 90%;
     background-color: #1b1c1f;
-    color: white;
+    color: hsl(0, 0%, 100%, 0.8);
     font-weight: bold;
     font-size: 1.2rem;
     font-family: "Open Sans", sans-serif;

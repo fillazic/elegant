@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import './Header.css';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
 function Header( ) {
 
@@ -66,10 +66,10 @@ function Header( ) {
         <div className='menu-visible' >
               <div className='profile-btn'>
               <img src="images/close.svg" alt="close" onClick={menuNotVis} />
-                <a href='#' ><button className='logIn' onClick={menuNotVis}> Lokacija </button></a>
-                <a href='#' ><button className='logIn' onClick={menuNotVis}> Stanovi </button></a>
-                <a href='#' ><button className='logIn' onClick={menuNotVis}> O nama </button></a>
-                <a href='#' ><button className='logIn' onClick={menuNotVis}> Kontakt </button></a>
+                <Link to='#' ><button className='logIn' onClick={menuNotVis}> Lokacija </button></Link>
+                <Link to='/stanovi' ><button className='logIn' onClick={menuNotVis}> Stanovi </button></Link>
+                <Link to='#' ><button className='logIn' onClick={menuNotVis}> O nama </button></Link>
+                <Link to='#' ><button className='logIn' onClick={menuNotVis}> Kontakt </button></Link>
               </div>
               <div className='under-profile'>
                 
