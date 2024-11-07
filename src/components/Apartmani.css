@@ -23,13 +23,13 @@
 
 .image-slider-apartmani {
   width: 30rem;
-  height: 40rem;
+  height: 35rem;
 }
 
 .prodaja-apartmana {
     position: absolute;
     font-weight: bold;
-    top: 30rem;
+    top: 28rem;
     width: 90%;
     text-align: center;
     margin: auto 1rem;
@@ -44,6 +44,15 @@
     color: #ffff;
     opacity: 0;
     animation: moveDown 2s ease-in-out forwards;
+}
+
+.prodaja-apartmana img {
+    position: absolute;
+    height: 3rem;
+    width: 1rem;
+    top: 3rem;
+    left: 1.2rem;
+    animation: moveArrow 1s alternate-reverse infinite;
 }
 
 div.selected-container {
@@ -82,20 +91,6 @@ div.selected-container:hover {
     padding-left: 1rem;
 }
 
-.icon {
-    height: 100%;
-    position: absolute;
-    right: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-}
-
-.icon i {
-    font-size: 1.5rem;
-    color: #002142;
-}
 
 .namesteni-apartmani {
     border: 4px solid hsla(0, 0%, 0%, 0.8);
@@ -295,5 +290,15 @@ div.selected-container:hover {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+  }
+
+  @keyframes moveArrow {
+
+    from {
+        transform: translateY(-1rem);
+    }
+    to {
+        transform: translateY(0);
     }
   }

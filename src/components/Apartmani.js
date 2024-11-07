@@ -11,7 +11,7 @@ function Apartmani () {
 
 const [povrsina, setPovrsina] = useState(null);
 
-const images= ["images/kuca.jpg", "images/stan9.jpg", "images/stan10.jpg","images/stan11.jpg", "images/bazen.jpg"];
+const images= ["images2/apartman2.jpg", "images/stan9.jpg", "images/stan10.jpg","images/stan11.jpg", "images/bazen.jpg"];
 const [detalj, setDetalj] = useState(null);
 const [activeSlide, setActiveSlide] = useState(0);
 
@@ -31,18 +31,6 @@ const handleSlideChange = (next) => {
         setActiveSlide(next); 
     };
 
-const settings ={
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    arrows: false,
-    fade: true,
-    waitForAnimate: false,
-    beforeChange: (current, next) => handleSlideChange(next)
-    }
 
 useEffect(() => {
         window.scrollTo(0, 0);
@@ -51,22 +39,18 @@ useEffect(() => {
 return (
     <div className='elegant-apartmani'>
          <div className='apartmani-vrnjacka-banja'>
-           <Slider {...settings} className='slike-apartmani'>               
-                {images.map((img, index) => (
                         <img
-                            src={img}
+                            src="images2/apartman2.jpg"
                             alt={'draskovic'}
-                            key={index}
-                            className={`image-slider-apartmani ${index === activeSlide ? "zoom-out-apartmani" : ""}`}
+                            className="image-slider-apartmani"
                         />
-                ))}
-            </Slider>
             </div>
             <div className='prodaja-apartmana'>
             <p>
                 Namešteni stanovi
                 <br/>
                 Stanovi u izgradnji
+                <img src="images/arrow.svg" alt="arrow"/>
             </p>         
         </div>
          <h3 className='vrnjacka-banja-apartmani'>Namešteni apartmani</h3>

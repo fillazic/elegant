@@ -9,7 +9,7 @@ import './ImageSlider.css';
 
 function ImageSlider() { 
 
-const images= ["images/kuca.jpg","images2/apartman0.jpg", "images2/apartman1.jpg", "images2/apartman2.jpg","images2/apartman3.jpg","images2/apartman4.jpg"];
+const images= ["images2/apartman7.jpg","images2/apartman0.jpg", "images2/apartman1.jpg", "images2/apartman2.jpg","images2/apartman3.jpg","images2/apartman4.jpg"];
 const [activeSlide, setActiveSlide] = useState(0);
 const [isOpen, setIsOpen] = useState(false);
 const [currentImageIndex, setCurrentImageIndex] = useState(0);

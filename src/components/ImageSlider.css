@@ -16,18 +16,16 @@
     position: absolute;
     overflow: hidden;
     animation:  introLoad 3s forwards;
-    top: 1rem;
-    left: -4rem;
 }
 
 .slike {
-    width: 28rem;
-    height: 35rem;
+    width: 30rem;
+    height: 38rem;
 }
 
 .image-slider {
-  width: 30rem;
-  height: 40rem;
+  width: 100%;
+  height: 38rem;
 }
 
 
@@ -36,9 +34,9 @@
 }
 
 .prodaja-stanova {
-    position: relative;
+    position: absolute;
     font-weight: bold;
-    height: 35rem;
+    height: 38rem;
     width: 100%;
     text-align: center;
     background-color: hsl(210, 100%, 13%, 0.5);
@@ -47,14 +45,13 @@
 }
 
 .prodaja-stanova p {
-    position: absolute;
-    top: 20.77rem;
     width: 100%;
     text-align: center;
     justify-content: center;
     font-size: 1.4rem;
     line-height: 3rem;
     padding: 1rem 0.2rem;
+    margin-top: 26rem;
     background-color: hsl(210, 100%, 13%, 0.8);
     color: #ffff;
     font-family: "Open Sans", sans-serif;
@@ -62,9 +59,6 @@
 
 
 .stanovi {
-    position: absolute;
-    top: 32rem;
-    left: 30%;
     margin: auto;
     width: 100%;
     background-color: #c5b358;
@@ -86,7 +80,7 @@
 
 .zgrada-elegant {
     margin: auto 0;
-    padding-top: 2rem;
+    margin-top: 40rem;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -111,7 +105,7 @@
 }
 
 #elegant-zgrada {
-    padding-top: 0;
+    margin-top: 1rem;
 }
 
 #elegant-zgrada p {
@@ -173,17 +167,18 @@ ul li {
 }
 
   .galerija {
+    text-align: center;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     row-gap: 0.5rem;
     column-gap: 0.5rem;
-    margin: 1rem 0.5rem;
+    margin: 1rem 1rem;
   }
 
   .galerija div {
-    max-width: 35rem;
-    max-height: 35rem;
+    max-width: 10rem;
+    max-height: 10rem;
   }
 
   .galerija div img {
@@ -197,13 +192,68 @@ ul li {
     transform: translate3d(0, 0, 0);
   }
 
+  @media only screen and (min-width: 420px){  
+
+    .galerija {
+      margin: 1rem 2.5rem;
+    }
+
+  }
+  @media only screen and (min-width: 500px){ 
+
+    .slike {
+      width: 45rem;
+      height: 45rem;
+  }
+
+  .image-slider {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .prodaja-stanova {
+    height: 45rem;
+}
+
+.zgrada-elegant {
+  margin-top: 48rem;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.lista { 
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.galerija-slika, .lokacija {
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.galerija {
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.5rem;
+}
+
+.galerija div {
+  max-width: 20rem;
+  max-height: 15rem;
+}
+
+  }
+
   @keyframes zoomOut {
     0% {
-        transform: scale(1.1);
+        transform: scale(1.2);
         opacity: 1;
     }
     100% {
-        transform: scale(0.85); 
+        transform: scale(1); 
     }
 }
 

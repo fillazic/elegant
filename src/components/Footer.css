@@ -71,3 +71,14 @@
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
+@media only screen and (min-width: 500px){ 
+    .elegant-draskovic-kontakt {
+        text-align: center;
+    }
+    .instagram-elegant img {
+        height: 1.4rem;
+        width: auto;
+        padding: 1rem 1.2rem;
+    }
+}
