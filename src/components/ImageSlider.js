@@ -98,40 +98,64 @@ return (
             </button>
             </Link>
         </div>
-       <div className='zgrada-elegant'>
+
+
+       <div className='dsct-zgrada'>
+            <div className='direktna-prodaja'>
+                            <p>
+                                Direktna prodaja stanova
+                                <br/>
+                                Izdavanje apartmana
+                            </p>
+            </div>
             <ul className='lista'>
-                <li>BAZEN NA OTVORENOM</li>
-                <li>PANORAMSKI KAFE-RESTORAN</li>
-                <li>LOBI BAR</li>
-                <li>RECEPCIJA</li>
-                <li>TERETANA</li>
+                <li>- BAZEN NA OTVORENOM</li>
+                <li>- PANORAMSKI KAFE-RESTORAN</li>
+                <li>- LOBI BAR</li>
+                <li>- RECEPCIJA</li>
+                <li>- TERETANA</li>
             </ul>
-            <p>
-                Stambeno - poslovna zgrada Elegant-Drašković nastala je idejom tvorca ovog savremenog objekta da posetiocima i gostima ponudi veliki broj sadržaja
-                , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi.
-            </p>
-            <div className='bazen'>
-                <img src='images/bazen.jpg' />
+            <div className='layer'>
+                <div className='adresa'>
+                    <p>Heroja Maričića 57a</p>
+                    <p>Vrnjačka Banja</p>
+                    <h3>KONTAKT</h3>
+                    <p>Miroslav Drašković</p>
+                    <p>elegant.mts@gmail.com</p>
+                    <p>+381 69 633 518</p>
+                </div>
+
+                <div>
+
+                </div>
             </div>
        </div>
 
        <div className='zgrada-elegant' id="elegant-zgrada">
-            <p>
-                Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
-                po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
-            </p>
-            <ul className='dodatak lista'>
-                <li>VIDEO NADZOR</li>
-                <li>ALU STOLARIJA</li>
-                <li>KARTIČNI SISTEM</li>
-                <li>PAMETNA ZGRADA</li>
-                <li>LIFT</li>
-                <li>PERIONICA</li>
-            </ul>
+
+            <div class="line-container">E</div>
+            <div className='opis-pocetna'>
+                <p className='text'>
+                <h3>Lokacija - Gde se nalazimo?</h3>
+                    Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
+                    po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
+                </p>
+                <img src='images/krov2.jpg' />
+            </div>
+            <div className='opis-pocetna'>
+                <img src='images/krov1.jpg' className='slika1' />
+                <p>
+                <h3>O projektu</h3>
+                    Stambeno - poslovna zgrada Elegant-Drašković nastala je idejom tvorca ovog savremenog objekta da posetiocima i gostima ponudi veliki broj sadržaja
+                    , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi.
+                </p>
+                <img src='images/krov1.jpg' className='slika2' />
+            </div>
+            <div class="line-container">E</div>
             <h3 className='lokacija'>Lokacija</h3>
             <div className='map'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9969772911054!2d20.889426575108825!3d43.62742185409933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475657f62cb008fb%3A0x49048b68e6055967!2sElegant%20Draskovic!5e0!3m2!1ssr!2srs!4v1730224240414!5m2!1ssr!2srs"            
-                allowfullscreen="" 
+                allowfullScreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">      
             </iframe>
@@ -161,3 +185,16 @@ return (
  }
 
  export default ImageSlider
+
+
+
+ /*                <ul className='dodatak lista'>
+                        <li>VIDEO NADZOR</li>
+                        <li>ALU STOLARIJA</li>
+                        <li>KARTIČNI SISTEM</li>
+                        <li>PAMETNA ZGRADA</li>
+                        <li>LIFT</li>
+                        <li>PERIONICA</li>
+                </ul>
+
+*/
