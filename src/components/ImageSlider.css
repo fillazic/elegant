@@ -528,7 +528,7 @@ ul li {
 .slike {
     margin: auto;
     margin-left: 0;
-    width: 65%;
+    width: 50%;
     height: auto;
 }
 
@@ -538,7 +538,7 @@ ul li {
 }
 
 .prodaja-stanova {
-  width: 65%;
+  width: 50%;
   z-index: 11;
   height: 50.5rem;
 }
@@ -549,7 +549,7 @@ ul li {
   margin-top: 3rem;
   text-align: left;
   font-family: "Open Sans", sans-serif;
-  padding-left: 68%;
+  padding-left: 60%;
 }
 
 .uvod {
@@ -580,7 +580,7 @@ ul li {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   z-index: 1;
-  left: 68%;
+  left: 60%;
   color: #c5b358;
 }
 

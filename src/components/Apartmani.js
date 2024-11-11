@@ -50,11 +50,11 @@ return (
                 Namešteni stanovi
                 <br/>
                 Stanovi u izgradnji
-                <img src="images/arrow.svg" alt="arrow"/>
             </p>         
         </div>
          <h3 className='vrnjacka-banja-apartmani'>Namešteni apartmani</h3>
 
+        <div className='apart'>
          {stanovi.map((stan, index) => (
             <div className='namesteni-apartmani'>
                 <div className='kraljevski-apartman'>
@@ -72,7 +72,8 @@ return (
                 </div>
             </div>
          ))}
-
+         </div>
+         <div class="line-container">E</div>
         <h3 className='elegant-apartmani-u-izgradnji'>Stanovi u izgradnji</h3>
         <div>
                 <div className='selected-container'>                    
@@ -98,7 +99,7 @@ return (
                         </div>
                     </div>
         </div>
-
+            <div className='apart2'>
             {filteredIzgradnja.map((stan, index) => (
                 <div className='apartmani-u-izgradnji'>
                     <div className='sema'>                  
@@ -113,6 +114,8 @@ return (
                         <p className='pregled-izgradnje' onClick={() => setDetalj(stan.slike)}>Detaljnije</p>
                 </div>
                 ))}
+            </div>
+
             <div className={ detalj !== null ? 'full-img' : 'non-full'}  onClick={() => setDetalj(null)} >
                 <div className='detaljnije' onClick={(e) => e.stopPropagation()}>
                     <div className='detalj-pozadina'>
