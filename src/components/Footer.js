@@ -6,6 +6,7 @@ function Footer( ) {
 
 return (
     <div className='elegant-draskovic-kontakt'>
+        <div className='footer'>
         <div className='kontakt-draskovic'>
             <h3>Kontakt</h3>
             <p>Miroslav Drašković</p>
@@ -17,6 +18,7 @@ return (
             <a href='#'><img src='images/instagram.svg' alt='instagram-draskovic'/></a>
             <a href='#'><img src='images/facebook.svg' alt='facebook-draskovic'/></a>
             <a href='#'><img src='images/tiktok.svg' alt='tiktok-draskovic'/></a>
+        </div>
         </div>
 
         <div className='elegant-copy-rights'>

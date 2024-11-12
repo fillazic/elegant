@@ -9,7 +9,7 @@ import './ImageSlider.css';
 
 function ImageSlider() { 
 
-const images= ["images2/apartman7.jpg","images2/apartman0.jpg", "images2/apartman1.jpg", "images2/apartman2.jpg","images2/apartman3.jpg","images2/apartman4.jpg"];
+const images= ["images2/apartman7.jpg","images2/apartman0.jpg", "images2/apartman2.jpg","images2/apartman3.jpg","images2/apartman4.jpg"];
 const [activeSlide, setActiveSlide] = useState(0);
 const [isOpen, setIsOpen] = useState(false);
 const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -25,36 +25,37 @@ const openModal = (index) => {
       
 const closeModal = () => setIsOpen(false);
 
-function debounce(func, delay) {
-    let timeout;
-    return function (...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), delay);
-    };
-  }
-
-  useEffect(() => {
-    // Scroll event handler that applies animation to each element with "animated-element" class
-    const handleScroll = debounce(() => {
-      const elements = document.querySelectorAll('.lista');
-
+    useEffect(() => {
+      // Select all elements with the "animated-element" class
+      const elements = document.querySelectorAll('.animacija');
+      
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate'); // Add animation class
+            } else {
+              entry.target.classList.remove('animate'); // Remove animation class to reverse
+            }
+          });
+        },
+        {
+          threshold: 0.5, // Trigger when 50% of the element is visible
+        }
+      );
+  
+      // Observe each element with the "animated-element" class
       elements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        // Check if the element is in the viewport
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight+100) {
-          element.classList.add('animate');
-        } 
+        observer.observe(element);
       });
-    }, 100); // Adjust delay as needed
-
-    // Add the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  
+      // Cleanup observer on component unmount
+      return () => {
+        elements.forEach((element) => {
+          observer.unobserve(element);
+        });
+      };
+    }, []);
   
 const settings ={
     infinite: true,
@@ -113,7 +114,6 @@ return (
                 <li>- PANORAMSKI KAFE-RESTORAN</li>
                 <li>- LOBI BAR</li>
                 <li>- RECEPCIJA</li>
-                <li>- TERETANA</li>
             </ul>
             <div className='layer'>
                 <div className='adresa'>
@@ -135,24 +135,23 @@ return (
 
             <div class="line-container">E</div>
             <div className='opis-pocetna'>
-                <p className='text'>
+                <div className='text animacija'>
                 <h3>Lokacija - Gde se nalazimo?</h3>
                     Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
                     po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.
-                </p>
+                </div>
                 <img src='images/krov2.jpg' />
             </div>
-            <div className='opis-pocetna'>
-                <img src='images/krov1.jpg' className='slika1' />
-                <p>
+            <div className='opis-pocetna' >
+                <img src='images/ulaz.jpg' className='slika1' />
+                <div className='animacija'>
                 <h3>O projektu</h3>
                     Stambeno - poslovna zgrada Elegant-Drašković nastala je idejom tvorca ovog savremenog objekta da posetiocima i gostima ponudi veliki broj sadržaja
                     , kako za rekreaciju tako i za odmor, gde bi i oni najmlađi i najstariji gosti mogli da pronadju  svoj kutak i da u potpunosti iskoriste pogodnsti koje ovaj objekat nudi.
-                </p>
-                <img src='images/krov1.jpg' className='slika2' />
+                </div>
+                <img src='images/ulaz.jpg' className='slika2'/>
             </div>
             <div class="line-container">E</div>
-            <h3 className='lokacija'>Lokacija</h3>
             <div className='map'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.9969772911054!2d20.889426575108825!3d43.62742185409933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475657f62cb008fb%3A0x49048b68e6055967!2sElegant%20Draskovic!5e0!3m2!1ssr!2srs!4v1730224240414!5m2!1ssr!2srs"            
                 allowfullScreen="" 

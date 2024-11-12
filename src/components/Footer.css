@@ -82,3 +82,57 @@
         padding: 1rem 1.2rem;
     }
 }
+
+@media only screen and (min-width: 820px){ 
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: auto 1.4rem;
+    }
+
+    .kontakt-draskovic {
+        text-align: left;
+        border-bottom: none;
+        font-size: 1.2rem;
+    }
+
+    .instagram-elegant {
+        text-align: left;
+        margin-top: 0;
+        border-bottom: none;
+        font-size: 1.2rem;
+    }
+
+    .instagram-elegant h3 {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+
+    .instagram-elegant img {
+        margin-left: 0;
+    }
+
+    .elegant-copy-rights {
+        border-top: 1px solid #c5b358;
+        font-size: 1rem;
+    }
+
+    .instagram-elegant img {
+        height: 1.6rem;
+        width: auto;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){ 
+    .kontakt-draskovic, .instagram-elegant {
+        font-size: 1.4rem;
+        margin: auto 3rem;
+    }
+
+    .instagram-elegant img {
+        height: 1.8rem;
+        width: auto;
+    }
+}
