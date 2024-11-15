@@ -34,13 +34,11 @@ const closeModal = () => setIsOpen(false);
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('animate'); // Add animation class
-            } else {
-              entry.target.classList.remove('animate'); // Remove animation class to reverse
-            }
+            } 
           });
         },
         {
-          threshold: 0.5, // Trigger when 50% of the element is visible
+          threshold: 0.4, // Trigger when 50% of the element is visible
         }
       );
   
@@ -117,12 +115,19 @@ return (
             </ul>
             <div className='layer'>
                 <div className='adresa'>
-                    <p>Heroja Maričića 57a</p>
-                    <p>Vrnjačka Banja</p>
-                    <h3>KONTAKT</h3>
-                    <p>Miroslav Drašković</p>
-                    <p>elegant.mts@gmail.com</p>
-                    <p>+381 69 633 518</p>
+                    <div className='ulica'>
+                        <img src='images/lokacija.svg'/>
+                        <p>Heroja Maričića 57a</p>
+                    </div>
+                        <p className='vb'>Vrnjačka Banja</p>
+                    <div className='kontakt'>
+                        <img src='images/mail-icon.svg' className='mail'/>
+                        <h3>KONTAKT</h3>
+                        <p>Miroslav Drašković</p>
+                        <p>elegant.mts@gmail.com</p>
+                        <p>+381 69 633 518</p>
+                        <img src='images/phone.svg' className='broj' />
+                    </div>
                 </div>
 
                 <div>
@@ -135,7 +140,7 @@ return (
 
             <div class="line-container">E</div>
             <div className='opis-pocetna'>
-                <div className='text animacija'>
+                <div className='animacija'>
                 <h3>Lokacija - Gde se nalazimo?</h3>
                     Objekat se nalazi na 200m od Banjskog šetališta, pa osim što je povoljno lociran u odnosu na sve lokacije koje je važno posetiti
                     po dolasku u Vrnjačku Banju, opet je dovoljno izdvojen i ušuškan kako bi svaki gost ili kupac koji poželi da bude smešten baš ovde imao svoj mir.

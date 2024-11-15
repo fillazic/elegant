@@ -141,6 +141,13 @@ ul li {
   margin-bottom: 2rem;
 }
 
+.opis-pocetna div {
+  text-align: left;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
 .slika1 {
   display: none;
 }
@@ -228,7 +235,7 @@ ul li {
   }
   
   .animate {
-    opacity: 1;
+    opacity: 0.8;
     transform: translateY(0);
   }
   
@@ -415,12 +422,54 @@ ul li {
 
 .adresa {
   line-height: 1rem;
-  padding-top: 1rem;
+  padding-top: 3rem;
   opacity: 0.8;
 }
 
 .adresa p {
   font-size: 1rem;
+}
+
+.ulica {
+  display: flex;
+  align-items: center;
+  width: 100rem;
+}
+
+.ulica p {
+  width: auto;
+  padding-left: 1rem;
+}
+
+.ulica img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.vb {
+  padding-top: 2rem;
+  padding-left: 2.2rem;
+}
+
+.kontakt {
+  padding-left: 2.2rem;
+  position: relative;
+}
+
+.broj {
+  height: 1.2rem;
+  width: auto;
+  position: absolute;
+  top: 7.6rem;
+  left: -0.2rem;
+}
+
+.mail {
+  height: 1rem;
+  width: auto;
+  position: absolute;
+  top: 5.6rem;
+  left: -0.2rem;
 }
 
 .lista {
