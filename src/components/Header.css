@@ -308,9 +308,6 @@
         font-size: 1.5rem;
     }
 
-    .nav-menu-stan:hover {
-        animation: none;
-    }
 
     .nav-menu:hover {
         color: #c5b358;

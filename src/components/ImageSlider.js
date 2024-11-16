@@ -101,6 +101,7 @@ return (
 
        <div className='dsct-zgrada'>
             <div className='direktna-prodaja'>
+                            <h3>Kupovina, iznajmljivanje - sve na jednom mestu!</h3>
                             <p>
                                 Direktna prodaja stanova
                                 <br/>
@@ -125,7 +126,7 @@ return (
                         <h3>KONTAKT</h3>
                         <p>Miroslav Drašković</p>
                         <p>elegant.mts@gmail.com</p>
-                        <p>+381 69 633 518</p>
+                        <p>+381 69 663 518</p>
                         <img src='images/phone.svg' className='broj' />
                     </div>
                 </div>

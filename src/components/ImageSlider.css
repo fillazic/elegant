@@ -498,14 +498,22 @@ ul li {
 
 .direktna-prodaja {
   position: absolute;
-  padding-top: 4rem;
+  padding-top: 2rem;
   line-height: 3rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   z-index: 12;
   left: 62%;
-  color: #c5b358;
+  color: #002244;
+}
+
+.direktna-prodaja p {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 0;
 }
 
 .dodatak {
@@ -627,14 +635,13 @@ ul li {
 }
   
 .direktna-prodaja {
-  padding-top: 2rem;
+  padding-top: 0;
   line-height: 4rem;
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   z-index: 1;
   left: 60%;
-  color: #c5b358;
 }
 
 .dsct-zgrada ul {
