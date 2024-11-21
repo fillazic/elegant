@@ -30,9 +30,6 @@ return (
             <p>{stan.opis}</p>
             <p>{stan.opis2}</p>
        </div>
-        <img src={stan.slike[4]} alt='apartmani-vb' className='slika-apart'/>
-
-        <h3 className='galerija-slika'>Galerija</h3>
             <div className='galerija'>
             {stan.slike.map((img, index) => (
                 <div key={index}>

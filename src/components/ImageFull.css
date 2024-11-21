@@ -67,3 +67,31 @@
     cursor: pointer;
     z-index: 10000;
   }
+
+
+  @media only screen and (min-width: 820px){ 
+    .full-image-slider {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem auto;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .full-image {
+      margin: auto;
+      height: 40rem;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+  }

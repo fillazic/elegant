@@ -30,6 +30,13 @@
     animation: moveUp 2s ease-in-out forwards;
 }
 
+@media only screen and (min-width: 1200px){ 
+
+    .detalji-apartmana {
+        padding-top: 7rem;
+        font-size: 1.4rem;
+    }
+}
 
 @keyframes moveUp {
 

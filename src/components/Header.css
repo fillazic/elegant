@@ -28,7 +28,7 @@
 .logo h2 {
     padding: 0.7rem;
     background-color: none;
-    color: #c5b358;
+    color: rgb(197, 179, 89);
     font-size: 1.7rem;
     font-family: "Lora", serif;
     font-weight: 400;
@@ -292,7 +292,7 @@
 @media only screen and (min-width: 1200px){ 
 
     .header { 
-        height: 7rem;
+        height: 6.2rem;
     }
 
     .logo h2 {
