@@ -576,6 +576,10 @@ ul li {
 }
   }
 @media only screen and (min-width: 1200px){ 
+
+  .apartmani {
+    padding-top: 4rem;
+}
   
   .okvir-slike {
     position: absolute;
@@ -623,6 +627,7 @@ ul li {
   font-size: 1.3rem;
   color: #ffffff;
   opacity: 1;
+  left: 57%;
 }
 
 .lista li {
@@ -641,7 +646,7 @@ ul li {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   z-index: 1;
-  left: 60%;
+  left: 57%;
 }
 
 .dsct-zgrada ul {
@@ -653,7 +658,7 @@ ul li {
 }
 
 .layer { 
-  height: 26rem;
+  height: 25.5rem;
 }
 
 .opis-pocetna div { 
@@ -684,7 +689,7 @@ ul li {
   grid-template-columns: repeat(4, 1fr); 
   row-gap: 2rem;
   column-gap: 0.8rem;
-  margin: 1rem 6rem;
+  margin: 1rem 3.5rem;
 }
 
 .galerija div {

@@ -62,13 +62,11 @@ return (
                         <img src={stan.slike[0]}/>
                     </div>
                 </div>
-                <h3>{stan.naslov}</h3>
                 <div className='opis'>
-                    <div>
+                        <h3>{stan.naslov}</h3>
                         <p>Kvadratura: {stan.povrsina}m2</p>
                         <p>Sprat: {stan.sprat}</p>
-                    </div>
-                    <Link to={`/${index}`} className='link' ><p className='pregled'>Detaljnije</p></Link>
+                        <Link to={`/${index}`} className='link' ><p className='pregled'>Detaljnije</p></Link>
                 </div>
             </div>
          ))}

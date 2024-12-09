@@ -189,7 +189,7 @@ return (
 
  }
 
- export default ImageSlider
+ export default ImageSlider;
 
 
 
